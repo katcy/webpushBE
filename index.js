@@ -23,18 +23,6 @@ const publicKey =
 const privateKey = "NvcmMFHwJgik3aZQ5wRdg4K9c5rEK93zHDVmM5kxtiE";
 
 webPush.setVapidDetails("mailto:test@tesst.com", publicKey, privateKey);
-//let subscription;
-
-let newSub = {
-  endpoint:
-    "https://fcm.googleapis.com/fcm/send/cPP3YCrGPsw:APA91bESCFprMJMwTamvlM7VmmEfPOYsgNFS7foSGm5aEHXGqI4vfBrjC2T7-sE3T-lT50Gw2PD9EsMXXcDNiOCb6i0dk6er9NKcAEa6CYtupsZvUIoA-6mp0LNk_xYOnH3JkY3zbFwq",
-  expirationTime: null,
-  keys: {
-    p256dh:
-      "BB7K1YYKdlDnXrKON51oH5uGQXZr5g7PQZlWSS01sp0Z6sXm5Jkfbk4_khY5siFEGg0MmzVkERAMvjtrI11v8kw",
-    auth: "fSgM9W9Lj57oVHSOVJGncQ5w3",
-  },
-};
 
 app.post("/subscribe", (req, res) => {
   console.log("subscription received", req.body);
