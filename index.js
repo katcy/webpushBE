@@ -9,8 +9,8 @@ const userModel = require("./Mongo/UserModel");
 
 const mongoAppConnection = `mongodb+srv://katcy:Neesama@143@katcy.jlmvn.mongodb.net/testDB`;
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 mongoose.connect(mongoAppConnection, {
   useNewUrlParser: true,
